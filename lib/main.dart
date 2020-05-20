@@ -4,6 +4,7 @@ import 'package:vibing/User_Login.dart';
 import 'package:vibing/User_Profile.dart';
 import 'package:vibing/collaboration.dart';
 import 'package:vibing/feed.dart';
+import 'package:vibing/forgot_password.dart';
 import 'package:vibing/settings.dart';
 import 'package:vibing/side_menu.dart';
 import 'package:vibing/your_sound_recording_list.dart';
@@ -25,6 +26,8 @@ class MyApp extends StatelessWidget {
         '/settings':(BuildContext context)=> new Settings(),
         '/your_sound_recording':(BuildContext context)=> new UserSoundRecordingList(),
         '/home':(BuildContext context)=> new Home(),
+        '/user_login':(BuildContext context)=> new UserLogin(),
+        '/forgot_password':(BuildContext context)=> new ForgotPassword(),
       },
       home: Home()
     );
@@ -74,7 +77,7 @@ class Home extends StatelessWidget {
                 trailing: Icon(
                   Icons.keyboard_tab
                 ),
-                onTap: null,
+                onTap: (){Navigator.push(context, MaterialPageRoute(builder:(context)=>UserLogin()),);},
               ),
               ListTile(
                 title: Text('Cancel'),

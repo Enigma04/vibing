@@ -1,6 +1,7 @@
 import'package:flutter/widgets.dart';
 import'package:flutter/foundation.dart';
 import'package:flutter/material.dart';
+import 'package:vibing/forgot_password.dart';
 import 'package:vibing/main.dart';
 
 class UserLogin extends StatelessWidget {
@@ -45,14 +46,14 @@ class UserLogin extends StatelessWidget {
       backgroundColor: Colors.yellow,
       body: Column(
         children: <Widget>[
-          SizedBox(height: 150,),
+          SizedBox(height: 200,),
           Text('Vibing',
           style:TextStyle(
               fontWeight: FontWeight.bold,
             fontSize: 64,
           ),
           ),
-          SizedBox(height: 200,),
+          SizedBox(height: 100,),
          _email,
         SizedBox(height: 20,),
         _pass,
@@ -71,7 +72,12 @@ class UserLogin extends StatelessWidget {
       else
         print('Incorrect username or password');
     }
-    )
+    ),
+    SizedBox(height:10),
+    FlatButton(
+      child: Text('Forgot password'),
+      onPressed: ()=> Navigator.push(context, MaterialPageRoute(builder:(context)=>ForgotPassword()),)
+    ),
     ],
       ),
     );
