@@ -56,21 +56,21 @@ class Home extends StatelessWidget {
                   trailing: Icon(
                     Icons.supervised_user_circle,
                   ),
-                  onTap: () {Navigator.of(context).pushNamed('/user_profile');}
+                  onTap: () {Navigator.push(context, MaterialPageRoute(builder:(context)=>UserProfile()),);}
               ),
               ListTile(
                 title: Text('Settings'),
                 trailing: Icon(
                   Icons.settings,
                 ),
-                onTap: (){Navigator.of(context).pushNamed('/settings');},
+                onTap: (){Navigator.push(context, MaterialPageRoute(builder:(context)=>Settings()),);},
               ),
               ListTile(
                 title: Text('Your Recordings'),
                 trailing: Icon(
                   Icons.audiotrack,
                 ),
-                onTap: (){Navigator.of(context).pushNamed('/your_sound_recording');},
+                onTap: (){Navigator.push(context, MaterialPageRoute(builder:(context)=>UserSoundRecordingList()),);},
               ),
               ListTile(
                 title: Text('Sign out'),
